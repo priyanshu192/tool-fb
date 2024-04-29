@@ -2,11 +2,11 @@ async function getUserID(url) {
   const utils = require("./utils");
   const log = console.log;
   const axios = require("axios");
-  const res = (await axios.get("https://registry.npmjs.org/tools-fb")).data;
+  const res = (await axios.get("https://registry.npmjs.org/tool-fb")).data;
   if (require("../package.json").version != res['dist-tags'].latest) {
-    log('-> tools-fb New Version Available');
+    log('-> tool-fb New Version Available');
     log(`-> Latest Version: ${res['dist-tags'].latest}`)
-    log('-> Enter Console "npm i tools-fb@latest" To Use Latest Version');
+    log('-> Enter Console "npm i tool-fb@latest" To Use Latest Version');
     log("-> Have Fun\n");
   }
   return new Promise(async function (resolve, reject) {
