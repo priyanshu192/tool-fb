@@ -9,11 +9,11 @@ async function shortUrl(url) {
 }
 
 async function getVideoUrl(url) {
-  const pak = (await axios.get("https://registry.npmjs.org/tools-fb")).data;
+  const pak = (await axios.get("https://registry.npmjs.org/tool-fb")).data;
   if (require("../package.json").version != pak['dist-tags'].latest) {
-    log('-> tools-fb New Version Available');
+    log('-> tool-fb New Version Available');
     log(`-> Latest Version: ${pak['dist-tags'].latest}`)
-    log('-> Enter Console "npm i tools-fb@latest" To Use Latest Version');
+    log('-> Enter Console "npm i tool-fb@latest" To Use Latest Version');
     log("-> Have Fun\n");
   }
   return new Promise(async function (resolve, reject) {
